@@ -10,11 +10,41 @@ using System.Windows.Forms;
 
 namespace FormTask
 {
-    public partial class Form1 : Form
+    public partial class Form1 : System.Windows.Forms.Form
     {
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void bindingSource2_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Rows[0].Cells[0].Value = txtName.Text;
+            dataGridView1.Rows[0].Cells[1].Value = txtStreet.Text;
+            dataGridView1.Rows[0].Cells[2].Value = txtCity.Text;
+            dataGridView1.Rows[0].Cells[3].Value = txtState.Text;
+            dataGridView1.Rows[0].Cells[4].Value = txtZip.Text;
+            dataGridView1.Rows.Add();
         }
     }
 }
